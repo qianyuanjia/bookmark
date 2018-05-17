@@ -23,7 +23,6 @@ window.onload=function(){
 		x:'xiedaimala.com',
 		z:'zhihu.com',
 		s:'sina.com.cn',
-		t:'tianya.cn',
 		a:'alipay.com'
 	};
 	if(localStorage.getItem('websites')){
