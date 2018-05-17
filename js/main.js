@@ -59,11 +59,6 @@ window.onload=function(){
 			createBtn('E','编辑','btn1',eleKbd);
 			if(oWeb[eleKbd.text]){			
 				createBtn('D','删除','btn2',eleKbd);
-				var oImg=document.createElement('img');
-				var idx=oWeb[eleKbd.text].indexOf('/')==-1?oWeb[eleKbd.text].length:oWeb[eleKbd.text].indexOf('/');
-				oImg.width=16;
-				oImg.src='../images/logo.png';
-				eleKbd.appendChild(oImg);
 				createIco(eleKbd,oWeb);
 			}
 			eleKbd.onmouseenter=function(){
@@ -130,11 +125,12 @@ function createIco(oKbd,oWeb){
 			oImg.src='http://'+oWeb[this.parent.text].substr(0,idx)+'/favicon.ico';
 		}
 	}else{
+		var oImg=document.createElement('img');
+		oImg.width=16;
+		oImg.src='../images/logo.png';
+		oKbd.appendChild(oImg);
 		newImg.onload=function(){
-			var oImg=document.createElement('img');
-			oImg.width=16;
 			oImg.src='http://'+oWeb[this.parent.text].substr(0,idx)+'/favicon.ico';
-			this.parent.appendChild(oImg);
 		}
 	}
 	newImg.src='http://'+oWeb[oKbd.text].substr(0,idx)+'/favicon.ico';
