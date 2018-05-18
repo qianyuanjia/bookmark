@@ -127,7 +127,7 @@ function createIco(oKbd,oWeb){
 	}else{
 		var oImg=document.createElement('img');
 		oImg.width=16;
-		oImg.src='../images/logo.png';
+		oImg.src='../favicon.ico';
 		oKbd.appendChild(oImg);
 		newImg.onload=function(){
 			oImg.src='http://'+oWeb[this.parent.text].substr(0,idx)+'/favicon.ico';
