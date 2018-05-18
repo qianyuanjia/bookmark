@@ -127,7 +127,7 @@ function createIco(oKbd,oWeb){
 	}else{
 		var oImg=document.createElement('img');
 		oImg.width=16;
-		oImg.src='../favicon.ico';
+		oImg.src='//i.loli.net/2018/05/18/5afe86c66773f.png';
 		oKbd.appendChild(oImg);
 		newImg.onload=function(){
 			oImg.src='http://'+oWeb[this.parent.text].substr(0,idx)+'/favicon.ico';
