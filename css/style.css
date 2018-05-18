@@ -69,6 +69,7 @@ main{
 	cursor: pointer;
 	box-sizing: border-box;
 	position: relative;
+	font-family: Helvetica;
 }
 #kbd kbd button
 {

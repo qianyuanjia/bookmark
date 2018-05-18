@@ -117,21 +117,20 @@ function createBtn(text,title,className,parent){
 }
 function createIco(oKbd,oWeb){
 	var idx=oWeb[oKbd.text].indexOf('/')==-1?oWeb[oKbd.text].length:oWeb[oKbd.text].indexOf('/');
-	var newImg=new Image();
-	newImg.parent=oKbd;
 	if(oKbd.getElementsByTagName('img').length>0){
-		newImg.onload=function(){
-			var oImg=this.parent.getElementsByTagName('img')[0];
-			oImg.src='http://'+oWeb[this.parent.text].substr(0,idx)+'/favicon.ico';
+		var oImg=oKbd.getElementsByTagName('img')[0];
+		oImg.src='http://'+oWeb[oKbd.text].substr(0,idx)+'/favicon.ico';
+		oImg.onerror=function(){	
+			this.src='//i.loli.net/2018/05/18/5afe86c66773f.png';
 		}
 	}else{
-		var oImg=document.createElement('img');
-		oImg.width=16;
-		oImg.src='//i.loli.net/2018/05/18/5afe86c66773f.png';
-		oKbd.appendChild(oImg);
-		newImg.onload=function(){
-			oImg.src='http://'+oWeb[this.parent.text].substr(0,idx)+'/favicon.ico';
+		var newImg=document.createElement('img');
+		newImg.width=16;
+		newImg.src='http://'+oWeb[oKbd.text].substr(0,idx)+'/favicon.ico';
+		oKbd.appendChild(newImg);
+		newImg.onerror=function(){
+			this.src='//i.loli.net/2018/05/18/5afe86c66773f.png';
 		}
 	}
-	newImg.src='http://'+oWeb[oKbd.text].substr(0,idx)+'/favicon.ico';
+	
 }
