@@ -121,7 +121,7 @@ function createIco(oKbd,oWeb){
 		var oImg=oKbd.getElementsByTagName('img')[0];
 		oImg.src='http://'+oWeb[oKbd.text].substr(0,idx)+'/favicon.ico';
 		oImg.onerror=function(){	
-			this.src='//i.loli.net/2018/05/18/5afe86c66773f.png';
+			this.src='//i.loli.net/2018/05/29/5b0d46bcd5ebc.png';
 		}
 	}else{
 		var newImg=document.createElement('img');
@@ -129,7 +129,7 @@ function createIco(oKbd,oWeb){
 		newImg.src='http://'+oWeb[oKbd.text].substr(0,idx)+'/favicon.ico';
 		oKbd.appendChild(newImg);
 		newImg.onerror=function(){
-			this.src='//i.loli.net/2018/05/18/5afe86c66773f.png';
+			this.src='//i.loli.net/2018/05/29/5b0d46bcd5ebc.png';
 		}
 	}
 	
