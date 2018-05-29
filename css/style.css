@@ -48,7 +48,7 @@ a{
 }
 
 main{
-	background: #eee url(../images/bg.jpg) no-repeat;
+	background: #666 url(../images/bg.jpg) no-repeat;
 	background-size: cover;
 	height: calc(100vh - 96px);
 	width: 100%;
